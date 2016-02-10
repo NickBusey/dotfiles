@@ -1,0 +1,17 @@
+# ~/.tmuxinator/Busey.yml
+
+name: Busey
+root: ~/Code/Busey
+
+windows:
+  - editor:
+      layout: tiled
+      panes:
+        - vim
+        - vim
+  - site:
+      root: ~/Code/Busey.me
+      layout: tiled
+      panes:
+        - mosh busey.me
+
