@@ -1,5 +1,17 @@
+set fdm=indent
+set fdc=4
+set fdl=1
+hi Folded ctermbg=20
+
+highlight clear FoldColumn
+
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+filetype plugin indent on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -14,7 +26,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'sudar/vim-arduino-syntax'
-Plugin 'vim-orgmode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,3 +50,4 @@ nnoremap <leader>sh :nohlsearch<Bar>:echo<CR>
 "paste from outside buffer
 nnoremap <leader>p :set paste<CR>"+p:set nopaste<CR>
 set number
+

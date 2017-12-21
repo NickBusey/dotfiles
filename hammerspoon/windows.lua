@@ -1,4 +1,28 @@
-hs.hotkey.bind({"cmd"}, "Left", function()
+hs.hotkey.bind({"cmd","ctrl"}, "Up", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w
+  f.h = max.h / 2
+  win:setFrame(f)
+end)
+
+hs.hotkey.bind({"cmd","ctrl"}, "Down", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+  f.x = max.x
+  f.y = max.y + (max.h / 2)
+  f.w = max.w
+  f.h = max.h / 2
+  win:setFrame(f)
+end)
+
+hs.hotkey.bind({"cmd","ctrl"}, "Left", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -10,7 +34,7 @@ hs.hotkey.bind({"cmd"}, "Left", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd"}, "Right", function()
+hs.hotkey.bind({"cmd","ctrl"}, "Right", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -22,7 +46,7 @@ hs.hotkey.bind({"cmd"}, "Right", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd","ctrl"}, "Up", function()
+hs.hotkey.bind({"cmd","alt","ctrl"}, "Up", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -44,4 +68,15 @@ function applicationWatcher(appName, eventType, appObject)
 end
 local appWatcher = hs.application.watcher.new(applicationWatcher)
 appWatcher:start()
+
+hs.hotkey.bind({"cmd","alt","ctrl"}, "Right", function()
+  local win = hs.window.focusedWindow()
+  win:moveOneScreenEast()
+end)
+
+hs.hotkey.bind({"cmd","alt","ctrl"}, "Left", function()
+  local win = hs.window.focusedWindow()
+  win:moveOneScreenWest()
+end)
+
 
