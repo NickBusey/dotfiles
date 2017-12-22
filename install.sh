@@ -1,8 +1,8 @@
-ln -s ~/.hammerspoon $(pwd)/hammerspoon
-ln -s ~/.tmux.conf $(pwd)/tmux.conf
-ln -s ~/.tmuxinator $(pwd)/tmuxinator
-ln -s ~/.zshrc $(pwd)/zshrc
-ln -s ~/.vimrc $(pwd)/vimrc
+ln -sF $(pwd)/hammerspoon ~/.hammerspoon/
+ln -sF $(pwd)/tmux.conf ~/.tmux.conf
+ln -sF $(pwd)/tmuxinator ~/.tmuxinator/
+ln -sF $(pwd)/zshrc ~/.zshrc
+ln -sF $(pwd)/vimrc ~/.vimrc
 
 
 

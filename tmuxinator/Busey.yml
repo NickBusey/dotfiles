@@ -1,17 +1,27 @@
-# ~/.tmuxinator/Busey.yml
-
 name: Busey
-root: ~/Code/Busey
+root: ~/Code
 
 windows:
-  - editor:
+  - Shell:
+      panes:
+        - whoami
+  - Editor:
       layout: tiled
       panes:
         - vim
-        - vim
-  - site:
-      root: ~/Code/Busey.me
+  - IRC:
       layout: tiled
       panes:
-        - mosh busey.me
-
+        - irssi
+  - SDF:
+      layout: tiled
+      panes:
+        - ssh nickbusey@sdf.org
+  - Weather:
+      layout: tiled
+      panes:
+        # Get the weather and update it once an hour
+        - curl wttr.in; while sleep 360; do curl wttr.in; done
+  - System:
+      panes:
+        - gtop

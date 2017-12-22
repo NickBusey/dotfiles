@@ -41,6 +41,7 @@ export PATH="$PATH:/Users/nick/Code/FlowerCollective/Web/www/app/Console"
 # Customize to your needs...
 alias editzsh='mate ~/.zshrc'
 
+alias tms='tmuxinator start Busey'
 alias gs='git status'
 alias fs='foreman start localhost'
 alias hl='heroku logs -t'
