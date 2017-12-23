@@ -9,6 +9,9 @@ windows:
       layout: tiled
       panes:
         - vim
+  - Notes:
+      panes:
+        - bulletnotescli
   - IRC:
       layout: tiled
       panes:
@@ -23,5 +26,13 @@ windows:
         # Get the weather and update it once an hour
         - curl wttr.in; while sleep 360; do curl wttr.in; done
   - System:
+      layout: even-horizontal
       panes:
         - gtop
+        - ipfs daemon
+  - Map:
+      panes:
+        - telnet mapscii.me
+  - Music:
+      panes:
+        - musikcube

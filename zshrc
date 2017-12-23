@@ -11,8 +11,7 @@ export GOPATH=$HOME/Code/golang
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="jreese"
 
-# Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
+export TERM="xterm-256color"
 
 # Comment this out to disable weekly auto-update checks
 # export DISABLE_AUTO_UPDATE="true"
