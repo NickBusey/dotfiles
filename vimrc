@@ -3,6 +3,9 @@ set fdc=4
 set fdl=1
 hi Folded ctermbg=20
 
+set wildmode=longest,list,full
+set wildmenu
+
 highlight clear FoldColumn
 
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>

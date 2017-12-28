@@ -4,7 +4,7 @@ root: ~/Code
 windows:
   - Shell:
       panes:
-        - whoami
+        - telnet towel.blinkenlights.nl 666
   - Editor:
       layout: tiled
       panes:
@@ -26,13 +26,18 @@ windows:
         # Get the weather and update it once an hour
         - curl wttr.in; while sleep 360; do curl wttr.in; done
   - System:
-      layout: even-horizontal
+      layout: main-horizontal
       panes:
         - gtop
         - ipfs daemon
+        - telnet telehack.com 23
   - Map:
       panes:
         - telnet mapscii.me
   - Music:
       panes:
         - musikcube
+  - Games:
+      panes:
+        - telnet stonia.ttu.ee 4000
+        - telnet freechess.org 5000
